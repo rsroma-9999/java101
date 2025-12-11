@@ -1,5 +1,7 @@
 package Act6;
 
-public class Refuelable {
 
+public interface Refuelable {
+    void refuel();
+    
 }
