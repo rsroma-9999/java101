@@ -39,7 +39,6 @@ public class MyApp {
 		System.out.println("Enter product to search: ");
 		
 		String query = scanner.nextLine();
-	//	String query = scanner.nextLine().trim();
 		int productIndex = -1;
 		
 		while (true) {
