@@ -46,7 +46,6 @@ public class MyApp {
         for (int i = 0; i < products.size(); i++) {
            if (products.get(i).equalsIgnoreCase(query)) {
                productIndex = i;
-           break;
            }
         }
 		
