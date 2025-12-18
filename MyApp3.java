@@ -8,8 +8,9 @@ import java.text.DecimalFormat;
 public class MyApp3 {
 
 	public static void main(String[] args) {
-			
- 
+		
+	    Executable alerts = new Alerts();
+       
 		// Create a Map of products with 5 initial records
 		Map<String, Double> products = new HashMap<>();
 		   products.put("Laptop", 50000.00);
@@ -20,15 +21,7 @@ public class MyApp3 {
 	  
 		   DecimalFormat dec2 = new DecimalFormat("0.00"); // decimal format x.xx
 
- /*		// Iterate through the HashMap
-		        System.out.println("All scores:");
-		        for (Map.Entry<String, Double> productEntry : products.entrySet()) {
-		            System.out.println(productEntry.getKey());
-		            System.out.println(dec2.format(productEntry.getValue()));
-		        }
- */		        
-// /*
-	   Scanner scanner = new Scanner(System.in);
+       Scanner scanner = new Scanner(System.in);
 	   int options;
 		        
 	   do {
@@ -42,8 +35,7 @@ public class MyApp3 {
 		 options = scanner.nextInt();
 		 scanner.nextLine(); 
 		  
-			
-		 
+						 
 		// Option 1
          if (options == 1) {
                  System.out.print("Enter a product to search: ");
@@ -56,7 +48,7 @@ public class MyApp3 {
                  }
                  System.out.println();
       
-             // Option 2            
+        // Option 2            
          } else if (options == 2) { 
 
                  System.out.print("Enter a product to add: ");
@@ -84,7 +76,7 @@ public class MyApp3 {
                  System.out.println("Total products: " + products.size()); 	
                  System.out.println(); 
                  
-              // Option 4 
+        // Option 4 
          } else if (options == 4) {    
         	 System.out.println(); 
         	 String minKey = null;
@@ -101,18 +93,19 @@ public class MyApp3 {
                  System.out.println(); 
                  
 		// Invalid Option		
-         } else if (options > 5) {        
-         	
-         System.out.println("*Invalid option! Please retry.");
+         } else if (options > 5 || options < 1) {        
+   
+       	 alerts.run();
          System.out.println(); 
          	 
          }
 	 
 	  } while (options != 5);
 
-		System.out.println();
-		System.out.println("Exit program.");
-		scanner.close();
+	   // Option 5
+	System.out.println();
+	alerts.stop();
+	scanner.close();
 			
 	}
 

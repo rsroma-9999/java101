@@ -1,8 +1,8 @@
 package Act3;
 
-public interface executable {
-
+public interface Executable {
+	
 	void run();
 	void stop();
-	
+
 }

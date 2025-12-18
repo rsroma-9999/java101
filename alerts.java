@@ -1,6 +1,6 @@
 package Act3;
 
-public class alerts implements executable {
+public class Alerts implements Executable {
 
 	@Override
 	public void run() {
@@ -9,7 +9,7 @@ public class alerts implements executable {
 	
 	@Override
 	public void stop() {
-		System.out.println("Closing program...");
+		System.out.println("Exit program.");
 	}
 	
 }
